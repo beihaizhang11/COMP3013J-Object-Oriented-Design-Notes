@@ -57,6 +57,13 @@ Def: UML is the dominant modelling language in industry which efines a language 
 ### Domain model
 - This is a very basic class diagram
 
+# 02-Class Diagram
+![alt text](./Pic/image.png)
+
+# 03-Other Diagrams
+![alt text](<Pic/屏幕截图 2024-12-23 174924.png>)
+
+
 # 05-Requirements Analysis/Business Modelling
 ## Use case description
 - Name
