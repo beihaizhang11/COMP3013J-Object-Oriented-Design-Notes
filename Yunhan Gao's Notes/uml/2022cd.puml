@@ -1,0 +1,37 @@
+@startuml
+class Hospital {
+  *doctors : List<Doctor>
+  *appointments : List<Appointment>
+  *patients : List<Patient>
+}
+
+class Doctor {
+  -name : String
+  -title : String
+  -speciality : String
+  *appointments : List<Appointment>
+}
+
+class Appointment {
+  -date : Date
+  -time : Time
+  -location : String
+  *doctor : Doctor
+  *patient : Patient
+}
+
+class Patient {
+  -name : String
+  -dateOfBirth : Date
+  *appointments : List<Appointment>
+}
+
+Hospital --> "1..*" Doctor : doctors
+Hospital --> "1..*" Appointment : appointments
+Hospital --> "1..*" Patient : patients
+
+Doctor --> "0..*" Appointment : appointments
+Appointment --> "1" Doctor : doctor
+Appointment --> "1" Patient : patient
+Patient --> "0..*" Appointment : appointments
+@enduml
