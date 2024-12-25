@@ -1,0 +1,40 @@
+@startuml 1
+
+class Traveller {
+    - name: String
+    - passportNumber: String
+    - dateOfBirth: Date
+}
+
+class Ticket {
+    - ticketType: String <<enum>> {Economy, Business, FirstClass}
+    - baggageAllowance: String
+}
+
+class Flight {
+    - flightNumber: String
+    - origin: Airport
+    - destination: Airport
+    - plannedDeparture: DateTime
+    - plannedArrival: DateTime
+    - seatNumber: String
+}
+
+class Airport {
+    - code: String
+    - city: String
+    - country: String
+}
+
+class Airline {
+    - name: String
+    - country: String
+}
+
+Traveller "1" -- "*" Ticket : "travels on"
+Ticket "1" -- "*" Flight : "includes"
+Flight "1" -- "1" Airline : "operated by"
+Flight "1" -- "1" Airport : "origin"
+Flight "1" -- "1" Airport : "destination"
+
+@enduml
