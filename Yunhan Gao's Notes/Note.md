@@ -46,6 +46,7 @@ Def: UML is the dominant modelling language in industry which efines a language 
 ## Unified Process
 - UP includes activities such as requirements analysis,  analysis, design, implementation, and testing.
 - UP assumes that models are important in software development
+
 ![](./Pic/屏幕截图%202024-12-20%20221954.png)
 
 ## Other
@@ -77,7 +78,7 @@ Def: UML is the dominant modelling language in industry which efines a language 
 - Data Outcomes
 
 # 06-Analysis
->Analysis is the task of describing how interactingobject can perform the use cases.
+>Analysis is the task of describing how interacting object can perform the use cases.
 
 **Target**: A big part of this is proving that the **task is possible**
 We use a technique known as **realisation**
@@ -85,7 +86,6 @@ We use a technique known as **realisation**
 ## Software Architecture Patterns
 ### Layered architecture
 >Layered architectures are designed to help build stable designs.
->
 >Key idea is **management of dependencies**
 
 - The concept is to allocate different responsibilities to different subsystems
@@ -112,7 +112,7 @@ We use a technique known as **realisation**
 - **I**nterface segregation principle
 - **D**ependency Inversion principle
 
-### **S**ingle-responsibility Principle
+### Single-responsibility Principle
 
 >A class should have one and only one reason to change, meaning that a class should have only one job. (一个类一个任务)
 

@@ -1,0 +1,19 @@
+@startuml
+actor Secretary
+participant System
+participant AppointmentController
+participant AppointmentService
+participant Doctor
+
+Secretary -> System: startDisplayAppointments()
+System -> Secretary: presentForm()
+Secretary -> System: selectDateAndDoctor(date, doctor)
+System -> AppointmentController: getAppointments(date, doctor)
+AppointmentController -> AppointmentService: fetchAppointments(date, doctor)
+AppointmentService -> Doctor: getAppointments(date)
+Doctor -> AppointmentService: return appointments
+AppointmentService -> AppointmentController: return appointments
+AppointmentController -> System: return appointments
+System -> Secretary: displayAppointments(appointments)
+
+@enduml
